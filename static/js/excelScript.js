@@ -1,8 +1,7 @@
 //Function to get data from the server and export it as an Excel file. 
 //Expects a string parameter for the type of data to be exported (inventory/deliveries).
-function exportToExcel(sheetType) {
-    // jQuery shorthand method for a GET request
-    $.get('/export', { type: sheetType }, function(data) {
+$.get('/export', { type: sheetType })
+    .done(function(data) {
         // Convert returned JSON data to worksheet
         var workSheet = XLSX.utils.json_to_sheet(data);
 
@@ -15,5 +14,7 @@ function exportToExcel(sheetType) {
 
         /* Save to file */
         XLSX.writeFile(workBook, sheetType + ".xlsx");
-    }, 'json');
-}
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.error("Request failed: " + textStatus + ", " + errorThrown);
+    });
