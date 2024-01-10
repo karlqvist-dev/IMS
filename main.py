@@ -67,10 +67,10 @@ def export_data():
     sheet_type = request.args.get('type')
 
     if sheet_type == 'inventory':
-        # Fetch inventory data (replace this with your actual inventory data retrieval logic)
+        # Fetch inventory data
         inventory_data = data_access.read_inventory_data()
 
-        # Edit the data such that warehouse_city becomes Färdigvarulager, product_name becomes Produkt, amount becomes Lagersaldo and the remaining attributes are removed
+        # Edit the data such that warehouse_city becomes Warehouse, product_name becomes Product, amount becomes Amount and the remaining attributes are removed
         for item in inventory_data:
             item['Warehouse'] = item['warehouse_city']
             item['Product'] = item['product_name']
@@ -88,14 +88,14 @@ def export_data():
         # Fetch deliveries data (replace this with your actual deliveries data retrieval logic)
         deliveries_data = data_access.read_deliveries_data()
 
-        # Edit the data such that date becomes Datum, product_name becomes Produkt, warehouse_name becomes Till/från, amount becomes Antal, incoming becomes Ingående and the remaining attributes are removed
-        # Change the values of Ingående to Ja/Nej
+        # Edit the data such that date becomes Date, product_name becomes Product, warehouse_name becomes Warehouse, amount becomes Amount, incoming becomes Incoming and the remaining attributes are removed
+        # Change the values of Incoming to Yes/No
         for item in deliveries_data:
             item['Date'] = item['date']
             item['Product'] = item['product_name']
             item['Warehouse'] = item['warehouse_name']
             item['Amount'] = item['amount']
-            item['Incoming'] = 'Ja' if item['incoming'] else 'Nej'
+            item['Incoming'] = 'Yes' if item['incoming'] else 'No'
             item.pop('date')
             item.pop('product_name')
             item.pop('warehouse_name')
