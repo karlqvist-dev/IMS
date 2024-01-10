@@ -1,0 +1,83 @@
+<!-- index.html -->
+{% extends "base.html" %}
+
+{% block title %}Inventory{% endblock %}
+
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/indexScript.js') }}"></script>
+
+<h1 class="mb-2">
+    Inventory <span class="float-right"><button id="exportButton" class="btn btn-success">Export Excel</button></span>
+</h1>
+
+<!-- Form title that also expands/collapses the form -->
+<h4 class="form-title bg-dark text-white p-1" data-toggle="collapse" data-target="#updateForm" aria-expanded="false" aria-controls="updateForm" role='button'>
+    Update inventory <span class="float-right">+</span>
+</h4>
+<!-- Form for updating inventory (initially collapsed) -->
+<form id="updateForm" class="collapse" method="post" action="{{ url_for('update_inventory') }}">
+    <p>Updating the inventory balance records a new incoming or outgoing delivery in the log for incoming and outgoing deliveries.</p>
+
+    <div class="form-group">
+        <label for="product">Product</label>
+        <select class="form-control p-1" id="product" name="product" required>
+            <!-- Populate product options here -->
+            {% for product in products %}
+                <option value="{{ product.id }}">{{ product.id }} ({{ product.name }})</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="warehouse">Lager</label>
+        <select class="form-control p-1" id="warehouse" name="warehouse" required>
+            <!-- Populate warehouse options here -->
+            {% for warehouse in warehouses %}
+                <option value="{{ warehouse.id }}">{{ warehouse.city }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control p-1" id="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+        <label for="quantity">Specify the quantity to increase or decrease the balance by. Provide a positive value for incoming delivery and a negative value for outgoing delivery.</label>
+        <input type="number" class="form-control p-1" id="quantity" name="quantity" required>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input p-1" id="incoming" name="incoming">
+        <label class="form-check-label" for="incoming">Incoming delivery (date not yet known).</label>
+    </div>
+
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-dark">OK</button>
+    </div>
+</form>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Product ID</th>
+            <th>Product name</th>
+            <th>Warehouse</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in inventory_data %}
+            <tr>
+                <td>{{ item.product_id }}</td>
+                <td>{{ item.product_name }}</td>
+                <td>{{ item.warehouse_city }}</td>
+                <td>{{ item.amount }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

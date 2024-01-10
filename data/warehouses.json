@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "city" : "Frankfurt"
+    },
+    {
+        "id" : 2,
+        "city" : "Posznan"
+    },
+    {
+        "id" : 3,
+        "city" : "Malmö"
+    },
+    {
+        "id" : 4,
+        "city" : "Berlin"
+    },
+    {
+        "id" : 5,
+        "city" : "Paris"
+    }
+]

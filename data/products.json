@@ -1,0 +1,27 @@
+[
+    {
+        "id" : "P001",
+        "name" : "EcoSync Smart Thermostat",
+        "price" : 130
+    },
+    {
+        "id" : "P002",
+        "name" : "GigaBeats Wireless Earbuds",
+        "price" : 80
+    },
+    {
+        "id" : "P003",
+        "name" : "QuantumView 4K Smart TV",
+        "price" : 600
+    },
+    {
+        "id" : "P004",
+        "name" : "PowerPulse Fast Charging Power Bank",
+        "price" : 50
+    },
+    {
+        "id" : "P005",
+        "name" : "SuperHeat Smart Microwave",
+        "price" : 150
+    }
+]

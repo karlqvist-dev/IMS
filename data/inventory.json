@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "product_id": "P001",
+    "warehouse_id": 1,
+    "amount": 1600
+  },
+  {
+    "id": 2,
+    "product_id": "P002",
+    "warehouse_id": 1,
+    "amount": 1410
+  },
+  {
+    "id": 3,
+    "product_id": "P003",
+    "warehouse_id": 1,
+    "amount": 2075
+  },
+  {
+    "id": 4,
+    "product_id": "P004",
+    "warehouse_id": 1,
+    "amount": 1200
+  },
+  {
+    "id": 5,
+    "product_id": "P005",
+    "warehouse_id": 1,
+    "amount": 618
+  },
+  {
+    "id": 6,
+    "product_id": "P001",
+    "warehouse_id": 2,
+    "amount": 3300
+  },
+  {
+    "id": 7,
+    "product_id": "P002",
+    "warehouse_id": 2,
+    "amount": 1750
+  },
+  {
+    "id": 8,
+    "product_id": "P003",
+    "warehouse_id": 2,
+    "amount": 3000
+  },
+  {
+    "id": 9,
+    "product_id": "P004",
+    "warehouse_id": 2,
+    "amount": 1250
+  },
+  {
+    "id": 10,
+    "product_id": "P005",
+    "warehouse_id": 2,
+    "amount": 1190
+  },
+  {
+    "id": 11,
+    "product_id": "P001",
+    "warehouse_id": 3,
+    "amount": 685
+  },
+  {
+    "id": 12,
+    "product_id": "P002",
+    "warehouse_id": 3,
+    "amount": 1400
+  },
+  {
+    "id": 13,
+    "product_id": "P003",
+    "warehouse_id": 3,
+    "amount": 1780
+  },
+  {
+    "id": 14,
+    "product_id": "P004",
+    "warehouse_id": 3,
+    "amount": 450
+  },
+  {
+    "id": 15,
+    "product_id": "P005",
+    "warehouse_id": 3,
+    "amount": 25
+  },
+  {
+    "id": 16,
+    "product_id": "P001",
+    "warehouse_id": 4,
+    "amount": 90
+  },
+  {
+    "id": 17,
+    "product_id": "P002",
+    "warehouse_id": 4,
+    "amount": 100
+  },
+  {
+    "id": 18,
+    "product_id": "P003",
+    "warehouse_id": 4,
+    "amount": 100
+  },
+  {
+    "id": 19,
+    "product_id": "P004",
+    "warehouse_id": 4,
+    "amount": 50
+  },
+  {
+    "id": 20,
+    "product_id": "P005",
+    "warehouse_id": 4,
+    "amount": 100
+  },
+  {
+    "id": 21,
+    "product_id": "P001",
+    "warehouse_id": 5,
+    "amount": 100
+  },
+  {
+    "id": 22,
+    "product_id": "P002",
+    "warehouse_id": 5,
+    "amount": 100
+  },
+  {
+    "id": 23,
+    "product_id": "P003",
+    "warehouse_id": 5,
+    "amount": 200
+  },
+  {
+    "id": 24,
+    "product_id": "P004",
+    "warehouse_id": 5,
+    "amount": 50
+  },
+  {
+    "id": 25,
+    "product_id": "P005",
+    "warehouse_id": 5,
+    "amount": 100
+  }
+]
