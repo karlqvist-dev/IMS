@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
 import data_access
 
@@ -82,7 +82,7 @@ def export_data():
             item.pop('warehouse_id')
             item.pop('id')
 
-        return inventory_data
+        return jsonify(inventory_data)
 
     elif sheet_type == 'deliveries':
         # Fetch deliveries data (replace this with your actual deliveries data retrieval logic)
@@ -105,7 +105,7 @@ def export_data():
             item.pop('warehouse_id')
             item.pop('id')
 
-        return deliveries_data
+        return jsonify(deliveries_data)
 
     else:
         return [
